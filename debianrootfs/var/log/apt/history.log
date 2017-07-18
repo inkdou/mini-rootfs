@@ -1,0 +1,5 @@
+
+Start-Date: 2017-02-14  10:38:19
+Commandline: apt-get install locales dialog
+Install: dialog:amd64 (1.2-20140911-1), locales:amd64 (2.19-18+deb8u7)
+End-Date: 2017-02-14  10:38:22

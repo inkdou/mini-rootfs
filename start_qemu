@@ -1,0 +1,5 @@
+#!/bin/bash
+#qemu-system-x86_64 -netdev tap,ifname=tap0,id=network0,script=no,downscript=no  -device rtl8139,netdev=network0 -kernel ./bzImage -hda ./rootfs.img  -append "init=/sbin/init console=ttyS0 root=/dev/sda rw"  -nographic
+qemu-system-x86_64 -net nic,model=virtio,macaddr=00:16:23:66:66:66 -net dump,file="./a.pcap" -net tap  -kernel ./bzImage -hda ./rootfs.img  -append "init=/sbin/init console=ttyS0 root=/dev/sda rw"  -nographic
+#qemu-system-x86_64 -netdev type=vhost-user,id=mynet1,chardev=./socket -device virtio-net-pci,netdev=mynet1,mac=52:54:00:02:d9:09  -kernel ./bzImage -hda ./rootfs.img  -append "init=/sbin/init console=ttyS0 root=/dev/sda rw"  -nographic
+
